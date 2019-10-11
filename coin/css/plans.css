@@ -1,0 +1,196 @@
+/*invesmentContainer*/
+.invesmentContainer{
+	width: 100%;
+	background:  #1b324f;
+	overflow: hidden;
+	padding: 50px 0;
+}
+.investmentInner{
+	width: 1170px;
+	margin: 0 auto;
+}
+.ctn-invesment-part{
+	width: 18.9%;
+	float:  left;
+	border-radius: 4px;
+	margin-right: 15px;
+	padding: 20px 15px 0px;
+	background: url(../../bit-gold.co/images/bg-plan.html) #f4447c no-repeat center;
+	background-size: cover;
+	border: 1px solid #59708c;
+	text-align: center;
+	font-weight:500;
+}
+.ctn-invesment-part5{
+	margin-right: 0;
+}
+.ctn-invesment-part img{
+}
+.ctn-invesment-part3 img{
+}
+.ctn-invesment-part hr{
+	border-top: 1px solid #8c9296;
+	margin: 6px 0;
+}
+.investment-title{
+	width: 100%;
+	overflow: hidden;
+}
+.investment-title h3{
+	display: inline-block;
+	font-family: 'UniSansHeavyCAPS';
+	margin: 0;
+	text-align:  right;
+	font-size: 48px;
+	color: #091930;
+	text-transform: uppercase;
+}
+.investment-title h3 span{
+	font-size: 36px;
+	font-family: 'UniSansThinCAPS';
+}
+
+.ctn-invesment-part a{
+	margin: 0;
+	font-size: 13px;
+	display: inline-block;
+	text-transform: uppercase;
+	color: #1b324f;
+	font-weight:  700;
+	padding: 8px 27px;
+	margin-bottom: -25px;
+	text-decoration: none;
+	border-radius: 30px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#edd272+1,d1a744+50,b77d18+100 */
+	background: #edd272; /* Old browsers */
+	background: -moz-linear-gradient(top, #edd272 1%, #d1a744 50%, #b77d18 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #edd272 1%,#d1a744 50%,#b77d18 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #008bb8 1%,#008bb8 50%,
+#008bb8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edd272', endColorstr='#b77d18',GradientType=0 ); /* IE6-9 */
+}
+.ctn-invesment-part a:hover{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#365984+1,27456a+50,193250+100 */
+	color: #fff;
+	background: #365984; /* Old browsers */
+	background: -moz-linear-gradient(top, #365984 1%, #27456a 50%, #193250 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #365984 1%,#27456a 50%,#193250 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #365984 1%,#27456a 50%,#193250 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#365984', endColorstr='#193250',GradientType=0 ); /* IE6-9 */
+}
+.investment-ctn{
+	width: 100%;
+	padding: 10px 0 20px;
+	text-align: left;
+}
+.investment-ctn p{
+	margin: 0;
+	font-size: 16px;
+	color: #fff;
+	font-weight:  600;
+	padding: 0 10px;
+}
+.investment-ctn p span{
+	float: right;
+}
+.calculate{
+	width: 100%;
+	overflow:  hidden;
+}
+.calculate h1{
+	text-align: center;
+	margin: 0;
+	font-size: 18px;
+	color: #091930;
+	padding: 30px 0 20px;
+	text-transform: uppercase;
+}
+.ctn-calculator{
+	width: 100%;
+	border: 1px solid #eacc6c;
+	overflow: hidden;
+}
+.calculatorLeft{
+	width: 20%;
+	float: left;
+	border-right: 1px solid #eacc6c;
+	padding: 21px 0;
+	padding-left: 100px;
+	background: url(../../bit-gold.co/images/icon-call.html) #253b55 no-repeat center left;
+}
+.calculatorLeft h3{
+	display: inline-block;
+	margin: 0;
+	font-size: 18px;
+	line-height: 25px;
+	color: #fff;
+	text-transform: uppercase;
+}
+.calculatorRight{
+	width: 80%;
+	float:  right;
+	overflow: hidden;
+	padding: 23px 15px;
+	background: #162639;
+}
+.calculator-part1{
+	width: 35%;
+	float: left;
+	position:  relative;
+}
+.calculator-part1 h3{
+	display: inline-block;
+	float: left;
+	margin: 0;
+	padding: 15px 10px;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #fff;
+}
+.calculator-part1 span{
+position: absolute;
+    left: 155px;
+    top: 6px;
+}
+.calculator-part1 input{
+	width: 50%;
+	float: right;
+	height: 45px;
+	margin-right: 15px;
+	border: 1px solid #3c4351;
+	border-radius: 3px;
+	background: #242e40;
+	font-size: 14px;
+	outline:none;
+	color: #627d91;
+	    padding-left: 50px;
+}
+.calculator-part2{
+	width: 65%;
+	float: right;
+}
+.calculator-part2 p{
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #627d91;
+	margin: 0;
+	display:  inline-block;
+	line-height: 23px;
+	width: 29%;
+	float: left;
+}
+.calculator-part2 p strong{
+	font-weight: 400;
+	text-transform: uppercase;
+}
+.calculator-part2 p span{
+	color: #091930;
+}
+.calculator-part2 hr{
+	border: 0;
+	margin: 0;
+	margin-right: 37px;
+	float: left;
+	border-left: 1px solid #f1d770;
+	padding: 21px 0;
+}

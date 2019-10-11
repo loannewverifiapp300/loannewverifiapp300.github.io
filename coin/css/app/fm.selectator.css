@@ -1,0 +1,340 @@
+/** 
+ * Selectator jQuery Plugin
+ * A plugin for select elements
+ * version 1.1, Dec 11th, 2015
+ * by Ingi P. Jacobsen
+ */
+/* dimmer */
+#selectator_dimmer {
+ 
+  width: 100%;
+  height: 100%;
+  display:none;
+  position: fixed;
+  z-index: -1;
+}
+/* main element */
+.selectator_element {
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  border:none;
+  display: inline-block;
+  text-decoration: none;
+  vertical-align: middle;
+}
+.selectator_element * {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.selectator_element img {
+  display: block;
+}
+.selectator_element.focused {
+  //box-shadow: 0 0 1px #39f;
+}
+.selectator_element.multiple {
+  padding-right: 20px !important;
+  padding-bottom: 5px !important;
+}
+.selectator_element.single {
+     height: 60px;
+    padding: 12px 10px !important;
+}
+.selectator_element:after 
+{
+    position: absolute;
+    cursor: pointer;
+    content: '';
+    right: 7px;
+    color: #aaa;
+    top: 50%;
+    margin-top: -14px;
+    width: 10px;
+    height: 5px;
+    background:  url('../../images/select_bg.png') center center no-repeat;
+    /* background: url(../images/icons/select-arrow.png) center center no-repeat; */
+}
+.selectator_element .selectator_chosen_items {
+  display: inline;
+}
+.single.selectator_element .selectator_chosen_items {
+  display: block;
+}
+.selectator_element .selectator_chosen_items .selectator_chosen_item {
+  display: inline-block;
+  background-color: #39f;
+  border-radius: 2px;
+  color: #fff;
+  padding: 4px 20px 4px 4px;
+  font-size: 13px;
+  margin: 2px;
+  position: relative;
+  vertical-align: top;
+}
+.single.selectator_element .selectator_chosen_items .selectator_chosen_item {
+  background-color: transparent;
+  color: #000;
+  display: block;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+}
+.multiple.selectator_element .selectator_chosen_items .selectator_chosen_item {
+  margin: 5px 0 0 5px;
+  padding: 3px 20px 2px 5px;
+}
+.selectator_element .selectator_chosen_items .selectator_chosen_item .selectator_chosen_item_left {
+       float: left;
+    width: 100%;
+    line-height: 14px;
+    text-transform: uppercase;
+    /* padding: 5px 0 0 15px; */
+    font-size: 14px;
+        color: #427791;
+}
+.selectator_element .selectator_chosen_items .selectator_chosen_item .selectator_chosen_item_left > a { color:#de3c3c; font-size: 14px; }
+.selectator_element .selectator_chosen_items .selectator_chosen_item .selectator_chosen_item_left img {
+  height: 23px;
+}
+.multiple.selectator_element .selectator_chosen_items .selectator_chosen_item .selectator_chosen_item_left {
+  float: left;
+  width: 22px;
+}
+.multiple.selectator_element .selectator_chosen_items .selectator_chosen_item .selectator_chosen_item_left img {
+  height: 18px;
+}
+.single.selectator_element .selectator_chosen_items .selectator_chosen_item .selectator_chosen_item_title {
+  height: auto;
+}
+.selectator_chosen_item_title {            padding: 5px 0 4px 4px;
+    color: #0d3e42;
+    text-transform: uppercase;
+    
+    font-size: 15px; }
+.multiple.selectator_element .selectator_chosen_items .selectator_chosen_item .selectator_chosen_item_title {
+  float: left;
+  padding-top: 2px;
+}
+.selectator_element .selectator_chosen_items .selectator_chosen_item .selectator_chosen_item_subtitle {
+  display: none;
+}
+.selectator_element .selectator_chosen_items .selectator_chosen_item .selectator_chosen_item_right {
+       float: right;
+    width: auto;
+    margin-top: -17px;
+    background: url(../images/btn-2.png) center center no-repeat;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #575757;
+    /* text-shadow: 0 1px 2px rgba(0,0,0,0.2); */
+    text-align: center;
+    /* border-radius: 3px; */
+    /* padding: 2px 5px; */
+    margin-right: 13px;
+}
+.multiple.selectator_element .selectator_chosen_items .selectator_chosen_item .selectator_chosen_item_right {
+  display: none;
+}
+.selectator_element .selectator_chosen_items .selectator_chosen_item .selectator_chosen_item_remove {
+  display: inline-block;
+  font-weight: bold;
+  color: #fff;
+  margin: 0 0 0 5px;
+  padding: 6px 5px 4px 5px;
+  cursor: pointer;
+  font-size: 11px;
+  line-height: 10px;
+  vertical-align: top;
+  border-radius: 0 2px 2px 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.selectator_element .selectator_chosen_items .selectator_chosen_item .selectator_chosen_item_remove:hover {
+  color: #000;
+  background-color: #8cf;
+}
+.single.selectator_element .selectator_chosen_items .selectator_chosen_item .selectator_chosen_item_remove {
+  display: none;
+}
+.multiple.selectator_element .selectator_chosen_items .selectator_chosen_item .selectator_chosen_item_remove {
+  padding: 7px 5px 4px 5px;
+}
+.selectator_element .selectator_input,
+.selectator_element .selectator_textlength {
+  border: 0;
+  display: inline-block;
+  margin: 0;
+  background-color: transparent;
+  font-size: 13px;
+  outline: none;
+  padding: 6px 0 0 0;
+}
+.multiple.selectator_element .selectator_input,
+.multiple.selectator_element .selectator_textlength {
+  padding: 1px 0 0 0;
+  margin: 7px 0 2px 5px;
+}
+.single.selectator_element .selectator_input {
+    
+ opacity: 0 !important;
+ z-index: -1;
+      border: 2px solid #d2e3e3;
+    position: absolute;
+    bottom: -40px;
+    left: 0px;
+    z-index: 101;
+    padding: 10px 25px;
+    width: 100%;
+    width: calc(100% + 0px);
+    border-bottom: 0;
+    background-color: #f6f6f6;
+    color: #333;
+    right: 4px;
+    margin-bottom: -1px;
+    font-size: inherit;
+}
+.single.options-hidden.selectator_element .selectator_input {
+  opacity: 0;
+  position: absolute;
+  left: -10000px;
+}
+.single.options-visible.selectator_element .selectator_input {
+  opacity: 1;
+}
+.disable_search.selectator_element .selectator_input {
+  opacity: 0;
+  padding: 0 1px 1px 0 !important;
+}
+.selectator_element .selectator_options {
+        margin: 0;
+    padding: 0;
+    border-radius: 0 0 0 0;
+    font-family: sans-serif;
+    position: absolute;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    z-index: 10000;
+    background-color: rgba(9, 139, 188, 0.84);
+    max-height: 250px;
+    list-style: none;
+    left: 0px;
+    right: 0px
+}
+.single.selectator_element .selectator_options {
+  padding-top: 0;
+  border-top: 0;
+  margin-top:-60px;
+
+}
+.disable_search.selectator_element .selectator_options {
+  border-top: 1px solid #7f9db9;
+}
+.single.disable_search.selectator_element .selectator_options {
+  padding-top: 0;
+}
+.options-hidden.selectator_element .selectator_options {
+  display: none;
+}
+.selectator_element .selectator_options .selectator_option {
+      padding: 10px;
+    height: 40px;
+    cursor: pointer;
+    
+    
+
+}
+.selectator_element .selectator_options .selectator_option:before,
+.selectator_element .selectator_options .selectator_option:after {
+  content: "";
+  display: table;
+}
+.selectator_element .selectator_options .selectator_option:after {
+  clear: both;
+}
+.selectator_element .selectator_options .selectator_option.active {
+  background-color: rgba(0,0,0,0.1)
+}
+.selectator_element .selectator_options .selectator_group {
+  padding: 5px;
+  font-weight: bold;
+}
+.selectator_element .selectator_options .selectator_group_option {
+  padding: 5px 5px 5px 20px;
+}
+.selectator_element .selectator_options .selectator_option .selectator_option_left,
+.selectator_element .selectator_options .selectator_group_option .selectator_option_left {
+  float: left;
+}
+.selectator_element .selectator_options .selectator_option .selectator_option_left img,
+.selectator_element .selectator_options .selectator_group_option .selectator_option_left img {
+  height: 30px;
+}
+.selectator_element .selectator_options .selectator_option .selectator_option_title,
+.selectator_element .selectator_options .selectator_group_option .selectator_option_title {
+  margin-left: 6px;
+    margin-top: 3px;
+}
+.selectator_element .selectator_options .selectator_option .selectator_option_subtitle,
+.selectator_element .selectator_options .selectator_group_option .selectator_option_subtitle {
+  font-size: 75%;
+  color: #888;
+  margin-left: 35px;
+}
+.selectator_element .selectator_options .selectator_option .selectator_option_right,
+.selectator_element .selectator_options .selectator_group_option .selectator_option_right {
+        float: right;
+    width: auto;
+    
+    background: url(../images/btn-2.png) center center no-repeat;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 300;
+
+    //text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    
+    text-align: center;
+    /* border-radius: 3px; */
+    //padding: 2px 5px;
+    margin-right: 0px;
+}
+/*# sourceMappingURL=fm.selectator.jquery.css.map */
+
+.selectator_option_title
+{ 
+    color: #0d3e42;
+    text-transform: uppercase;
+   
+    font-size: 15px;
+}
+ .selectator_option_subtitle { 
+    text-transform: uppercase;
+    
+    font-size: 11px !important;
+    line-height: 7px;
+    color: #136875 !important;
+    padding-bottom: 5px; }
+
+    .selectator_option_left {    
+     display: block;
+    height: 19px;
+    width: auto;
+   
+   
+    font-size:14px;
+   
+    
+    text-transform: uppercase;
+    color:#fff;   
+     float: left;
+      //width: 100%;
+      //padding: 5px 0 0 15px;
+      
+      font-size: 14px;
+     
+  }
+     .selectator_option_left > a { color:#de3c3c; } 
